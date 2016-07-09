@@ -1,0 +1,12 @@
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+cal_circle_center.py
+MEC.py
+reset_db.py
+output_data.py
+insert_data.py
+venv
+case_set.csv

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>2015年蘇迪勒颱風雨後病例集中區</title>
+        <link rel="stylesheet" href="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity=
+        "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="https://npmcdn.com/leaflet@0.7.7/dist/leaflet.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+
+        <!-- Include this library for mobile touch support  -->
+        <script src="jquery.ui.touch-punch.min.js"></script>
+        <script src="leafletembed.js"></script>
+        <script src="index.js"></script>
+        <script src="SliderControl.js"></script>
+        
+    </head>
+    <body>
+        <style>
+            html,body{
+                height: 100%;
+                width: 100%; 
+            }
+            #content{
+                height: 100%;
+            }
+            #map { 
+                height:85%;
+                width:70%;
+                float: left;
+                margin-left: 2%;
+            } 
+            #description{
+                float: left;
+                height:600px;
+                width:25%;
+                padding-left: 2%;
+            }
+            .RuleA{
+                stroke-width:0.8;
+                  stroke:#d22525;
+                stroke-opacity:0.5;
+                fill:#d22525;
+                fill-opacity:0.025;
+            }
+            .RuleB{
+                stroke-width:0.8;
+                stroke:#d68a18;
+                stroke-opacity:0.5;
+                fill:#d68a18;
+                fill-opacity:0.02;
+            }
+        </style>
+        <nav class="navbar navbar-default navbar-static-top">
+            <span class="navbar-brand" href="#">2015年蘇迪勒颱風雨後病例集中區</span>
+        </nav>
+        <div id="content">
+            <div id="map"></div>
+            <div id="description">
+               <div class="panel panel-danger">
+                  <div class="panel-heading">
+                    <input id="checkbox_RuleA"  type="checkbox" checked>
+                    Rule A : 發病點 
+                  </div>
+                  <div class="panel-body">
+                           3天內，以任一發病點為中心的半徑50公尺內，有5個發病點。</br>
+                           (時間:3天，距離:50公尺，數量:5)
+                   </div>
+               </div>
+               <div class="panel panel-warning">
+                  <div class="panel-heading">
+                    <input id="checkbox_RuleB" type="checkbox" checked>
+                    Rule B : 發病點 
+                  </div>
+                  <div class="panel-body">
+                           5天內，以任一發病點為中心的半徑100公尺內，有10個發病點。</br>
+                           (時間:5天，距離:100公尺，數量:10)
+                   </div>
+               </div>
+          <!--
+               <div class="panel panel-success">
+                  <div class="panel-heading">Rule B :  </div>
+                  <div class="panel-body">
+                            (時間:3天，距離:100公尺，數量:3)
+                   </div>
+               </div> 
+           -->
+               
+            </div>
+        </div>
+        <div>
+
+        </div>
+         
+        <script>
+        initmap();
+        </script>
+    </body>
+</html>
